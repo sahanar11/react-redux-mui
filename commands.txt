@@ -1,3 +1,8 @@
 npx create-react-app react-redux-mui --template redux
 
+yarn add styled-components redux-saga lodash-es
 
+yarn add @mui/material @mui/styled-engine-sc styled-components
+
+
+nvm install v16.17.0
