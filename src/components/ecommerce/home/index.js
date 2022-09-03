@@ -1,11 +1,22 @@
-import React from "react";
-import styled from "styled-components";
-const StyledContainer = styled.div``;
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
 
-export default function () {
+import HeaderSection from "../shared/layout/HeaderSection";
+import SidebarSection from "../shared/layout/SidebarSection";
+import SidebarNavLinks from "../shared/SidebarNavLinks";
+import MainSection from "../shared/layout/MainSection";
+
+export default function PersistentDrawerLeft() {
   return (
-    <StyledContainer>
-      <h1>Home!!</h1>
-    </StyledContainer>
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <HeaderSection title="CrazyKart Demo - Homepage"></HeaderSection>
+      <SidebarSection>
+        <SidebarNavLinks />
+      </SidebarSection>
+      <MainSection>Home page</MainSection>
+    </Box>
   );
 }
