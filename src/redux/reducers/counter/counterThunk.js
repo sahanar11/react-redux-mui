@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchCount } from "../../../features/counter/counterAPI";
+import { fetchCount } from "../../../services/counter/counterAPI";
 
 const CounterThunk = {
   incrementAsync: createAsyncThunk("counter/fetchCount", async (amount) => {

@@ -32,11 +32,10 @@ export const CounterSlice = createSlice({
   },
 });
 
-export const CounterActions = CounterSlice.actions;
-
 export const CounterSelector = {
   count: (state) => state[CounterSlice.name]?.value,
   status: (state) => state[CounterSlice.name]?.status,
 };
-
+export const CounterActions = CounterSlice.actions;
+export const CounterReducer = CounterSlice.reducer;
 export default CounterSlice;
