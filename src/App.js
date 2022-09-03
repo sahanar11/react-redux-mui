@@ -9,8 +9,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import MUIExamples from "./components/mui-examples";
-import CardLayout from "./components/layout-examples/card-layout/CardLayout";
-import LayoutContainer from "./components/layout-examples/sidebar-layout/LayoutContainer";
+import LayoutContainer from "./components/layout-examples/sticky-header-layout/LayoutContainer";
 
 function App() {
   return (

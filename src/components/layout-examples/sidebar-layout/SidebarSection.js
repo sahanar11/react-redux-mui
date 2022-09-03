@@ -9,11 +9,12 @@ const StyledSidebarSection = styled.div`
   flex-basis: 25%;
   min-width: 280px;
   max-width: 400px;
-  overflow: scroll;
+  overflow: auto;
 
   /* generic */
   background-color: whitesmoke;
-  padding: 40px;
+  padding: 20px;
+  text-align: justify;
 `;
 
 export default function () {
