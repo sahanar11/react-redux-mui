@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -29,7 +30,13 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-export default function ({ title, sidebarWidth = 240, children }) {
+export default function ({
+  title,
+  appbarActionsCenter,
+  appbarActionsRight,
+  sidebarWidth = 240,
+  children,
+}) {
   const dispatch = useDispatch();
   const sidebarOpen = useSelector(LayoutSelector.sidebarOpen);
   const handleSidebarOpen = () => {
@@ -59,7 +66,18 @@ export default function ({ title, sidebarWidth = 240, children }) {
         <Typography variant="h6" noWrap component="div">
           {title}
         </Typography>
-        {children}
+        <Box sx={{ flexGrow: 0.1 }} />
+        {appbarActionsCenter && (
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "flex" } }}>
+            {appbarActionsCenter}
+          </Box>
+        )}
+        <Box sx={{ flexGrow: 1 }} />
+        {appbarActionsRight && (
+          <Box sx={{ display: { xs: "flex", md: "flex" } }}>
+            {appbarActionsRight}
+          </Box>
+        )}
       </Toolbar>
     </AppBar>
   );
