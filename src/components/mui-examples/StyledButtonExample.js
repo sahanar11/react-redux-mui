@@ -9,8 +9,8 @@ const StyledButton = styled(Button)`
 
 export default function () {
   return (
-    <>
+    <div>
       <StyledButton variant="contained">Contained</StyledButton>
-    </>
+    </div>
   );
 }
