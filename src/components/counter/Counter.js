@@ -9,7 +9,7 @@ import {
 
 import CounterThunk from "../../redux/reducers/counter/counterThunk";
 
-export function Counter() {
+export default function () {
   const count = useSelector(CounterSelector.count);
   const status = useSelector(CounterSelector.status);
   const dispatch = useDispatch();
