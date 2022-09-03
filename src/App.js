@@ -9,7 +9,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import MUIExamples from "./components/mui-examples";
-import LayoutContainer from "./components/layout-examples/sticky-header-layout/LayoutContainer";
+import LayoutContainer from "./components/layout-examples/holy-grail-layout/LayoutContainer";
 
 function App() {
   return (

@@ -5,32 +5,23 @@ import { LoremIpsum } from "lorem-ipsum";
 const lorem = new LoremIpsum();
 
 const StyledMainSection = styled.div`
-  position: relative;
+  /* layout specific */
+  flex: 1;
 
   /* generic */
-  padding: 10px;
-`;
-
-const StyledFixedBox = styled.div`
-  position: absolute;
-  top: 0;
-
-  /* generic */
-  width: 50px;
-  height: 60px;
-  background: gray;
+  padding: 20px;
+  text-align: justify;
 `;
 
 export default function () {
   return (
     <StyledMainSection>
-      <h1>Main Section</h1>
-      <StyledFixedBox />
+      <h1>Main section</h1>
+      <p>{lorem.generateParagraphs(3)}</p>
       <p>{lorem.generateParagraphs(3)}</p>
       <p>{lorem.generateParagraphs(4)}</p>
-      <p>{lorem.generateParagraphs(4)}</p>
-      <p>{lorem.generateParagraphs(6)}</p>
-      <p>{lorem.generateParagraphs(6)}</p>
+      <p>{lorem.generateParagraphs(5)}</p>
+      <p>{lorem.generateParagraphs(5)}</p>
     </StyledMainSection>
   );
 }

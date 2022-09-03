@@ -5,6 +5,7 @@ const StyledHeaderSection = styled.div`
   /* layout specific */
   position: sticky;
   top: 0;
+  z-index: 10;
 
   /* generic */
   background-color: whitesmoke;
