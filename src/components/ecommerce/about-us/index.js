@@ -9,13 +9,6 @@ import SidebarNavLinks from "../shared/SidebarNavLinks";
 import MainSection from "../shared/layout/MainSection";
 
 export default function PersistentDrawerLeft() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  const handleSidebarOpen = () => {
-    setSidebarOpen(true);
-  };
-  const handleSidebarClose = () => {
-    setSidebarOpen(false);
-  };
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
