@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -11,8 +11,30 @@ import CounterHome from "./components/counter/Counter";
 
 import ECommerceHome from "./components/ecommerce/home";
 import AboutUs from "./components/ecommerce/about-us";
+import Signup from "./components/ecommerce/signup";
+import UserService from "./services/ecommerce/UserService";
 
 function App() {
+  useEffect(() => {
+    UserService.getUserDatabase();
+    try {
+      UserService.createUser({
+        email: "sahanar@test.gmail.com",
+        name: "Sahana",
+        age: 31,
+      });
+    } catch (e) {
+      console.error("Error occurred while creating user", e);
+      // ignore
+      // log & ignore
+
+      // rethrow
+      // log & rethrow
+
+      // handle
+      // log & handle
+    }
+  }, []);
   return (
     <div className="App">
       <Routes>
@@ -21,6 +43,7 @@ function App() {
           <Route path="*" element={<ECommerceHome />} />
           <Route path="home" element={<ECommerceHome />} />
           <Route path="aboutus" element={<AboutUs />} />
+          <Route path="signup" element={<Signup />} />
         </Route>
       </Routes>
     </div>
