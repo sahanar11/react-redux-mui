@@ -8,7 +8,8 @@ const ValidationMessagesConst = {
     INVALID_FORMAT_MISSING_AT_THE_RATE: "Don't forget to include the @",
   },
   PASSWORD: {
-    HELPER_TEXT: "You can use letters, numbers & special characters",
+    HELPER_TEXT:
+      "Use 8 or more characters with a mix of letters, numbers & symbols",
     INVALID_LENGTH: "Use 8 characters or more for your password",
     PASSWORD_STRENGTH_LOW:
       "Sorry, your password strength is low. You can use a combination of letters, numbers & special characters to build a strong password.",

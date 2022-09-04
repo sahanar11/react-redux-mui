@@ -1,14 +1,15 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-// import { fetchCount } from "../../../services/counter/counterAPI";
+
+import UserService from "../../../services/ecommerce/UserService";
 
 const UserThunk = {
-  createUser: createAsyncThunk(
-    `${UserSlice.name}/createUser`,
-    async (userDetails) => {
-      // const response = await createUser(amount);
-      // return response.data;
-    }
-  ),
+  createUser: createAsyncThunk("userState/createUser", async (payload) => {
+    const userDetails = payload?.userDetails;
+    const userDetailsResp = await UserService.createUser(userDetails);
+    return {
+      userDetails: userDetailsResp,
+    };
+  }),
 };
 
 export default UserThunk;
