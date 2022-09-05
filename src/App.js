@@ -17,23 +17,6 @@ import UserService from "./services/ecommerce/UserService";
 function App() {
   useEffect(() => {
     UserService.getUserDatabase();
-    try {
-      UserService.createUser({
-        email: "sahanar@test.gmail.com",
-        name: "Sahana",
-        age: 31,
-      });
-    } catch (e) {
-      console.error("Error occurred while creating user", e);
-      // ignore
-      // log & ignore
-
-      // rethrow
-      // log & rethrow
-
-      // handle
-      // log & handle
-    }
   }, []);
   return (
     <div className="App">
